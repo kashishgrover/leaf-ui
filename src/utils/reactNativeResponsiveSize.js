@@ -11,8 +11,16 @@ const horizontalScale = SCREEN_WIDTH / baseWidth;
 
 const scale = (size) => ((verticalScale / horizontalScale) * size);
 
-export const responsiveSizeInt = (size) => scale(size);
+// Disabled for now. This logic can be better.
+//
+// export const responsiveSizeInt = (size) => scale(size);
+// export const responsiveSizePx = (sizePx) => {
+//   const sizeInt = parseInt(sizePx, 10);
+//   return `${scale(sizeInt)}px`;
+// };
+
+export const responsiveSizeInt = (size) => size;
 export const responsiveSizePx = (sizePx) => {
   const sizeInt = parseInt(sizePx, 10);
-  return `${scale(sizeInt)}px`;
+  return `${sizeInt}px`;
 };
